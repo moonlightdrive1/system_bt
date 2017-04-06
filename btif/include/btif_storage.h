@@ -288,16 +288,14 @@ BOOLEAN btif_storage_is_restricted_device(const bt_bdaddr_t *remote_bd_addr);
 
 /*******************************************************************************
 **
-** Function         btif_storage_is_wiimote
+** Function         btif_storage_get_num_bonded_devices
 **
-** Description      BTIF storage API - checks if this device is a wiimote
+** Description      BTIF storage API - Gets the number of bonded devices
 **
-** Returns          TRUE   if the device is found in wiimote device list
-**                  FALSE otherwise
+** Returns          the number of bonded devices
 **
 *******************************************************************************/
-BOOLEAN btif_storage_is_wiimote(bt_bdaddr_t *remote_bd_addr, bt_bdname_t *remote_bd_name);
-
+int btif_storage_get_num_bonded_devices(void);
 #if (BLE_INCLUDED == TRUE)
 bt_status_t btif_storage_add_ble_bonding_key( bt_bdaddr_t *remote_bd_addr,
                                               char *key,
