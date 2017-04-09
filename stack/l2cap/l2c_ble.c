@@ -249,7 +249,6 @@ void l2cble_notify_le_connection (BD_ADDR bda)
     tL2C_LCB *p_lcb = l2cu_find_lcb_by_bd_addr (bda, BT_TRANSPORT_LE);
     tACL_CONN *p_acl = btm_bda_to_acl(bda, BT_TRANSPORT_LE) ;
     tL2C_CCB *p_ccb;
-    BD_NAME bdname;
 
     if (p_lcb != NULL && p_acl != NULL && p_lcb->link_state != LST_CONNECTED)
     {
